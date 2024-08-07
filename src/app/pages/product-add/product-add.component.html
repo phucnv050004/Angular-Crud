@@ -1,0 +1,37 @@
+<div class="container mx-auto">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6">Thêm sản phẩm</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white shadow rounded-lg p-4">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Tên sản phẩm</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="name" type="text" placeholder="Tên sản phẩm">
+    </div>
+    <div *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)">
+      <span class="text-red-500" *ngIf="form.get('name')?.hasError('required')">
+        No name is required
+      </span>
+
+      <span class="text-red-500" *ngIf="form.get('name')?.hasError('minlength')">
+        Nhập ít nhất 3 ký tự
+      </span>
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="price">Giá</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="price"  type="number" placeholder="Giá">
+    </div>
+    <div *ngIf="form.get('price')?.invalid && (form.get('price')?.dirty || form.get('price')?.touched)">
+      <span class="text-red-500" *ngIf="form.get('price')?.hasError('required')">
+        No price is required
+      </span>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="imageUrl">Ảnh</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="imageUrl" type="text" placeholder="URL ảnh">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Mô tả</label>
+      <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="description"  placeholder="Mô tả"></textarea>
+    </div>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg" type="submit">Thêm</button>
+  </form>
+</div>

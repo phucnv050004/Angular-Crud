@@ -1,0 +1,50 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Sao trị đẹp da update 123",
+      "price": 1000000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Máy sao trị đẹp da tốt nhất"
+    },
+    {
+      "id": "2",
+      "name": "Máy sấy tóc",
+      "description": "Máy sấy tóc đẹp nhất",
+      "imageUrl": "https://picsum.photos/200/300",
+      "price": 500000
+    },
+    {
+      "id": "3",
+      "name": "Tủ lạnh",
+      "description": "Tủ lạnh chuyên nghiệp",
+      "imageUrl": "https://picsum.photos/200/300",
+      "price": 2000000
+    },
+    {
+      "id": "4",
+      "name": "Điều hòa",
+      "description": "Điều hòa hiện đại",
+      "imageUrl": "https://picsum.photos/200/300",
+      "price": 1000000
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$BQCDYrnO/j76Av0WLpbhtu..qGEyVY4fIU.X9gA3X9KHxpRkxy4Tm",
+      "id": "1"
+    },
+    {
+      "email": "p@gmail.com",
+      "password": "$2a$10$.xM9W2Mms9zsgspJYISQ3e/wVs8PB5zJIB9Bd.n61fv1AZqG3Mslu",
+      "id": "2"
+    },
+   
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$10$rkxhohTXyoqYCInPrxAcMOSgFPBk/mGme5/r7TieVu8LpzjNnpQGm",
+      "id": "ttELCvf"
+    }
+  ]
+}

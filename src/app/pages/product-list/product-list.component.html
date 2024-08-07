@@ -1,0 +1,29 @@
+<div>
+  <h1 class="text-3xl ml-4">Product List</h1>
+  <button routerLink="/add" class="bg-blue-500 px-4 py-2 rounded mt-2 ml-4">Add</button>
+  <table>
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Img</td>
+        <td>Description</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products;index as i">
+        <td>{{i+1}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td><img src="{{product.imageUrl}}" width="90" alt=""></td>
+        <td>{{product.description}}</td>
+        <td>
+          <button class="bg-red-500 px-2 py-2 rounded" (click)="removeItem(product.id)">Delete</button>
+          <button class="bg-blue-500 px-4 py-2 rounded " [routerLink]="['/edit',product.id]">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
